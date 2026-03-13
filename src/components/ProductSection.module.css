@@ -1,0 +1,31 @@
+.section {
+  padding: var(--space-2xl) 0 var(--space-3xl);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4xl);
+  align-items: start;
+}
+
+.gallery {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-lg));
+  align-self: start;
+}
+
+.info {
+  /* Right panel scrolls naturally */
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+  .gallery {
+    position: relative;
+    top: 0;
+  }
+}
